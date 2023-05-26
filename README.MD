@@ -1,4 +1,4 @@
-# food HUB
+# museum HUB
 
 ## Date: 05/26/2023
 
@@ -7,7 +7,7 @@
 ----
 
 ### **_Description_**
-#### A menu directory that allows users to select meals. Details such as ingredients and reviews are provided when users create an account.
+#### A musuem directory that allows users to find more information about museums from all over the world. Details such as location, hours, cost, exhibitions are provided when users create an account. Once users create an account they can also leave reviews. 
 
 ---
 
@@ -22,17 +22,16 @@
 
 ### **_Getting Started_**
 
-##### Sign up and sign in as a new user and select healthy delicious meals. Homedelivery of ingredients is available. Leave reviews of your favorite meals for others to enjoy.
+##### Sign up and sign in as a new user and find out about more informations about museums. Location and other details are provided ones logged in. 
 
-##### A Trello board was used to keep track of development progress and can be viewed https://trello.com/b/bm928Kve/project-ga
-
+##### A Trello board was used to keep track of development progress and can be viewed 
 
 
 ---
 
 ### **_Screenshots_**
 
-![image](/images/food%20Small.png)
+![image](/images/museum.png)
 
 
 
