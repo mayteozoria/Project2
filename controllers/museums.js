@@ -15,7 +15,7 @@ const newMuseum = async (req, res) => {
   res.render('museums/new', { title: 'New Museums' })
 }
 const create = async (req, res) => {
-  req.body = !!req.body
+  req.body.currentExhibit = !!req.body.currentExhibit
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -23,13 +23,13 @@ const create = async (req, res) => {
     const museum = await Museum.create(req.body)
     res.redirect(`/museums/${museum._id}`)
   } catch (err) {
-    res.redirect('/museums/new', { errorMsg: err.message })
+    res.render('/museums/new', { errorMsg: err.message })
   }
 }
 
 module.exports = {
   index,
-  show,
   new: newMuseum,
+  show,
   create
 }

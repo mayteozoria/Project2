@@ -4,15 +4,16 @@
 
 
 
-<div class>
+<div class="information">
   <% museums.forEach(function(m) { %>
     <tr>
+      <td class="information"><a href="/museums/<%= m._id %>">Museum Information</a></td>
       <td><%= m.title %></td>
       <td><%= m.location %></td>
       <td><%= m.openingTime %></td>
       <td><%= m.closingTime %></td>
       <td><%= m.currentExhibit %></td>
-      <td><a href="/museums<%= m._id %>">DETAILS</a></td>
+      
     </tr>
     <% }); %>
  
