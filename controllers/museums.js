@@ -8,12 +8,13 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   const museum = await Museum.findById(req.params.id)
-  res.render('museums/show', { title: 'Museum Details', Museum })
+  res.render('museums/show', { title: 'Museum Details', museum })
 }
 
 const newMuseum = async (req, res) => {
-  res.render('museums/new', { title: 'New Museums' })
+  res.render('museums/new', { title: 'New Museums', errorMsg: '' })
 }
+
 const create = async (req, res) => {
   req.body.currentExhibit = !!req.body.currentExhibit
   for (let key in req.body) {
