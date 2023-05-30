@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-// optional shortcut to the mongoose.Schema class
+
 const Schema = mongoose.Schema
 
 const museumSchema = new Schema(
@@ -7,13 +7,17 @@ const museumSchema = new Schema(
     title: String,
     location: String,
     openingTime: {
-      type: String,
-      required: true
+      type: String
     },
     closingTime: {
-      type: String,
-      required: true
+      type: String
     },
+    nowOpening: {
+      type: Boolean,
+      default: true
+    }
+  },
+  {
     currentExhibit: String,
     addmissionCost: Number
   },

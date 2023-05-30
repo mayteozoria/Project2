@@ -16,7 +16,7 @@ const newMuseum = async (req, res) => {
 }
 
 const create = async (req, res) => {
-  req.body = !!req.body
+  req.body.nowOpening = !!req.body.nowOpening
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }

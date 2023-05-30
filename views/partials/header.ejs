@@ -9,22 +9,19 @@
   
  </head>
  <div class="topnav">
-    <div class="topnav-centered">
-      <a href="/">HOME</a>
-    </div>
+    <div class="topnav-centered"><a href="/">HOME</a></div>
     
-    <div class="topnav-right">
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-      <a href="/logout">LOG OUT</a>
+    <% if(user) { %> 
+    <div class="topnav-left">
+      <a href="/museums/new" <%- title === 'Add Museum' ? 'class="active"' : '' %>>ADD Museums</a>
     </div>
 
-    <div class="topnav-left">
-      <a href="/museums/new">ADD Museums</a>
-      
-    </div>
-    <div class="dropdown">
-      <a href="/museums" class="active">MUSEUMS</a>
-    </div>
+    <div><a href="/museums" <%- title === 'All Museums' ? 'class="active"' : '' %>>MUSEUMS</a></div>
+    <div><a href="/logout">LOG OUT</a></div>
+
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
    </div>
     <main>
    
