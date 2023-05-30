@@ -8,9 +8,9 @@ const museumSchema = new Schema(
     location: String,
     openingTime: {
       type: String,
-      required: trusted
+      required: true
     },
-    closingTIme: {
+    closingTime: {
       type: String,
       required: true
     },
@@ -18,7 +18,7 @@ const museumSchema = new Schema(
     addmissionCost: Number
   },
   {
-    timestamps: trueexit
+    timestamps: true
   }
 )
 

@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<h2>Add new museum recommendation </h2>
+
+<form action="/museums" method="POST" autocomplete="off">
+  <br>
+  <label>Title:<br><input type="text" name="title">
+</label><br>
+<label>
+  Location:<br><input type="text" name="location">
+</label><br>
+<label>
+ Current Exhibit:<br><input type="text" name="currentExhibit">
+</label><br>
+<label>
+  Link:<br><input type="text" name="link">
+</label>
+  </form>
+  <button type="submit">Add Museum</button>
+</form>
+
+<%- include('../partials/footer') %>
+
