@@ -8,11 +8,8 @@ const session = require('express-session')
 const passport = require('passport')
 const methodOverride = require('method-override')
 
-// Add the line below
 require('dotenv').config()
 require('./config/database')
-
-// new code below conf passport middleware
 require('./config/passport')
 
 const indexRouter = require('./routes/index')
