@@ -1,37 +1,42 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
- color:white;
-}
-
-body > nav {
-  grid-area: nav;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-  
-}
-
-nav a {
-  line-height: 3rem;
-  padding: 0 1rem;
-  text-transform: uppercase;
-  text-decoration: none;
   color:white;
-  
 }
-/* nav > a {
-  margin: 20px;
+.topnav {
+  position: relative;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-} */
-a {
-  color: black;
+  font-size: 17px;
 }
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: teal;
+}
+.topnav-right {
+  float: right;
+}
+
+
+ .topnav-right {
+    float: right;
+    display: block;
+  }
+
 .login {
   display: flex;
   justify-content: center;
