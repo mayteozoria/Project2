@@ -4,7 +4,7 @@ const passport = require('passport')
 
 /*GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Museum Directory' })
+  res.render('index', { title: 'Museum Planner' })
 })
 
 // router.get('/', function (req, res, next) {
