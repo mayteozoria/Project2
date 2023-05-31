@@ -1,4 +1,5 @@
 const Museum = require('../models/museum')
+const Tour = require('../models/tour')
 
 const index = async (req, res) => {
   const museums = await Museum.find({})
