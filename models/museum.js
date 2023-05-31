@@ -8,13 +8,6 @@ const reviewSchema = new Schema(
       type: String,
       required: true
     },
-    // rating: {
-    //   type: Number,
-    //   min: 1,
-    //   max: 5,
-    //   default: 5
-    // },
-
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',
@@ -29,8 +22,8 @@ const reviewSchema = new Schema(
 )
 const museumSchema = new Schema(
   {
-    title: String,
-    location: String,
+    title: { type: String },
+    location: { type: String },
     openingTime: {
       type: String
     },
@@ -49,5 +42,4 @@ const museumSchema = new Schema(
   }
 )
 
-// Compile the schema into a model and export it
 module.exports = mongoose.model('Museum', museumSchema)

@@ -3,13 +3,14 @@ const Tour = require('../models/tour')
 
 const index = async (req, res) => {
   const museums = await Museum.find({})
-  console.log(museums)
+
   res.render('museums/index', { title: 'All Museums', museums })
 }
 
 const show = async (req, res) => {
   const museum = await Museum.findById(req.params.id).populate('reviews')
-  res.render('museums/show', { title: 'Museum Information', museum })
+  const tours = await Tour.find({ musuem: req.params.id })
+  res.render('museums/show', { title: 'Museum Information', museum, tours })
 }
 
 const newMuseum = async (req, res) => {
@@ -17,7 +18,7 @@ const newMuseum = async (req, res) => {
 }
 
 const create = async (req, res) => {
-  req.body.nowOpening = !!req.body.nowOpening
+  req.body = !!req.body
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -25,6 +26,7 @@ const create = async (req, res) => {
     const museum = await Museum.create(req.body)
     res.redirect(`/museums/${museum._id}`)
   } catch (err) {
+    console.log(err)
     res.render('/museums/new', { errorMsg: err.message })
   }
 }

@@ -1,4 +1,5 @@
 <%- include('../partials/header') %>
+
 <div>Reserve Tour:</div>
 <section id="badge-container">
   <% tours.forEach(function(t) { %>
@@ -6,7 +7,7 @@
   <% }) %>
 </section>
 
-<form id="add-tour-form" action="/museums/<%= id %>/tickets/new" method="POST">
+<form id="add-tour-form" action="tours" method="POST">
   <label>Tickets:</label>
   <select input type="text" name="ticket">
     <option value="1">1</option>
@@ -18,5 +19,7 @@
     <option value="7">7</option>  
   <label>Date:</label>
    <input type="date" name="date">
+   <input type="submit" value="Add Tour">
+</form>
  
    <%- include('../partials/footer') %>

@@ -3,7 +3,7 @@ const Tour = require('../models/tour')
 
 const newTour = async (req, res) => {
   const tours = await Tour.find({}).sort()
-  res.render('tours/new', { title: 'Select Tour', tours })
+  res.render('tours/new', { title: 'Add Tour', tours })
 }
 
 const create = async (req, res) => {
