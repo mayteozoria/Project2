@@ -34,12 +34,11 @@ body {
   color: white;
   border-radius: 60%;
 }
- .topnav-right {
+.topnav-right {
     float: right;
     display: block;
   }
   
-
 .login {
   display: flex;
   justify-content: center;
@@ -50,12 +49,32 @@ body {
 .login img {
   height: 20px;
 }
-#show-page ul {
+#show-page {
+  
   margin: 0 0 2rem;
   padding: 0;
   list-style: none;
 }
   
-#show-page li {
+/* #show-page li {
   font-weight: bold;
+} */
+#add-review-form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+
+
+  box-sizing: border-box;
+}
+
+#add-review-form input[type="submit"]{
+  width: 50%;
+  background-color: teal;
+  color: white;
+  padding: 14px 20px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }

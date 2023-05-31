@@ -10,7 +10,7 @@ const create = async (req, res) => {
     await museum.save()
     res.redirect(`/museums/${museum._id}`)
   } catch (err) {
-    res.redirect(`/museums/${museum._id}`)
+    console.log(err)
   }
 }
 const deleteReview = async (req, res) => {
@@ -21,7 +21,7 @@ const deleteReview = async (req, res) => {
   if (!museum) return res.redirect('/museums')
   museum.reviews.remove(req.params.id)
   await museum.save()
-  res.redirect(`/musuems/${museum._id}`)
+  res.redirect(`/museums/${museum._id}`)
 }
 
 module.exports = {

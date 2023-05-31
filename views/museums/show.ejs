@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+
 <section id="show-page">
   <div>Name:</div>
   <div><%= museum.title %></div>
@@ -16,39 +17,49 @@
   <form id="add-review-form" method="POST" action="/museums/<%= museum._id %>/reviews">
     <label>Review:</label>
     <textarea name="content"></textarea>
-    <label>Rating:</label>
+    <!-- <label>Rating:</label>
     <select name="rating">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+      <option value="5">5</option> -->
+  
     <input type="submit" value="Add Review">
   </form>
-<!-- Add the line below -->
 <% } %>
 
 <% if (museum.reviews.length) { %>
   <table>
     <thead>
       <tr>
-        <th>User</th>
         <th>Date</th>
         <th>Review</th>
-        <th>Rating</th>
+       
       </tr>
     </thead>
-    
-<% museum.reviews.forEach(function(r) { %>
-<td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
-<td>
-  <% if (user?._id.equals(r.user)) { %>
-    <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
-      <button type="submit">X</button>
-    </form>
+    <tbody>
+      <% museum.reviews.forEach(function(r) { %>
+        <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+        <tr>
+          <td><%= r.createdAt.toLocaleDateString() %></td>
+          <td><%= r.content %></td>
+          <td>
+            <% if (user?._id.equals(r.user)) { %>
+              <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+              </form>
+            <% } %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+ <% } else { %>
+      <h5>No Reviews Yet</h5>
   <% } %>
-  <% }) %>
-</td>
+   
+  
+
 
 <%- include('../partials/footer') %>

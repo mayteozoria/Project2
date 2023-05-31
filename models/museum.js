@@ -8,12 +8,12 @@ const reviewSchema = new Schema(
       type: String,
       required: true
     },
-    rating: {
-      type: Number,
-      min: 1,
-      max: 5,
-      default: 5
-    },
+    // rating: {
+    //   type: Number,
+    //   min: 1,
+    //   max: 5,
+    //   default: 5
+    // },
 
     user: {
       type: Schema.Types.ObjectId,
@@ -40,11 +40,9 @@ const museumSchema = new Schema(
     nowOpening: {
       type: Boolean,
       default: true
-    }
-  },
-  {
+    },
     currentExhibit: String,
-    addmissionCost: Number
+    reviews: [reviewSchema]
   },
   {
     timestamps: true
