@@ -6,9 +6,18 @@ const newTour = async (req, res) => {
   res.render('tours/new', { title: 'Select Tour', tours })
 }
 
-const create(req,res) =>{
-  const req.body.time
+const create = async (req, res) => {
+  const ticket = req.body.ticket
+  req.body.museum = req.params.id
+  console.log(req.body)
+  try {
+    await Tour.create(req.body)
+  } catch (err) {
+    console.log(err)
+  }
+  res.redirect(`/museums/${req.params.id}`)
 }
+
 module.exports = {
   new: newTour,
   create
