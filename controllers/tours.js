@@ -2,7 +2,7 @@ const Museum = require('../models/museum')
 const Tour = require('../models/tour')
 
 const newTour = async (req, res) => {
-  const tours = await Museum.find({}).sort()
+  const tours = await Tour.find({}).sort()
   res.render('tours/new', { title: 'Select Tour', tours })
 }
 

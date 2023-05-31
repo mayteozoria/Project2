@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const tourSchema = new Schema(
   {
-    ticket: {
+    ticketNumber: {
       type: Number,
       required: true,
       unique: true
