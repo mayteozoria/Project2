@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<div>Reserve Tour:</div>
+<section id="badge-container">
+  <% tours.forEach(function(t) { %>
+    <article class="badge"><%= t.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-tour-form" action="/tours" method="POST">
+  <label>Tickets:</label>
+  <input type="text" name="name">
+  <label>Date:</label>
+  <input type="date" name="date">
+  <input type="submit" value="Add Tour">
+</form>
+<%- include('../partials/footer') %>
