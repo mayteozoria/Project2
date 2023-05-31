@@ -3,12 +3,12 @@ const Schema = mongoose.Schema
 
 const tourSchema = new Schema(
   {
-    name: {
-      type: String,
+    ticket: {
+      type: Number,
       required: true,
       unique: true
     },
-    Date: {
+    date: {
       type: Date,
       required: () => Date.now() + 365 * 24 * 60 * 60000
     },
