@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema
 
 const reviewSchema = new Schema(
@@ -34,10 +33,12 @@ const museumSchema = new Schema(
     closingTime: {
       type: String
     },
-    nowOpening: {
-      type: Boolean,
-      default: true
-    },
+    tour: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Tour'
+      }
+    ],
     currentExhibit: String,
     reviews: [reviewSchema]
   },

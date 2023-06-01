@@ -8,14 +8,17 @@ const newTour = async (req, res) => {
 }
 
 const create = async (req, res) => {
-  // const ticket = req.body.ticket
-  req.body.museum = req.params.id
+  const museum = await Museum.findById(req.params.id)
+
+  console.log(req.body)
   try {
-    await Tour.create(req.body)
+    const tour = await Tour.create(req.body)
+    museum.tour.push(tour._id)
+    museum.save()
   } catch (err) {
     console.log(err)
   }
-  res.redirect(`/tours/new`)
+  res.redirect(`/museums/${req.params.id}`)
 }
 
 module.exports = {

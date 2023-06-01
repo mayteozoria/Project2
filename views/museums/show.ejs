@@ -54,7 +54,8 @@
    
 
   <!-- new tours -->
-  <form id="add-tour-form" action="/museums/:id/tours" method="POST">
+  
+  <form id="add-tour-form" action="/museums/<%= museum._id %>/tours/new" method="POST"></form>
     <label>Tickets:</label>
     <select input type="text" name="ticketNumber">
       <option value="1">1</option>
@@ -68,7 +69,7 @@
   
     <label>Date:</label>
      <input type="date" id="tour-date" name="date"
-     value="2023-05-31"
+     value="2023-06-01"
         min="2023-05-31" max="2420-12-31">
     <label>Time:</label> 
   <select>
@@ -77,8 +78,26 @@
     <option value="3">3:00pm</option>
   </select>
   <button type="submit" value="Add Tour">Reserve Tour</button>
-  </form>
+ 
   
-
+  <% if (tours.length) { %>
+  <table>
+      <thead>
+        <tr>
+          <th>Tours</th>
+        </tr>
+      </thead>
+  <% tours.forEach(function(t) { %>
+   <thead>
+   <tr>
+       <td><%= t.ticketNumber %></td>
+       <td><%= t.date %></td>
+       
+       
+  </thead>
+ <% }); %>
+ </tbody>
+ <% } %>
+</table>
 
 <%- include('../partials/footer') %>

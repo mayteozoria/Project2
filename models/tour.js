@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
+
+//const museum = require('./museum')
 const Schema = mongoose.Schema
 
 const tourSchema = new Schema(
   {
     ticketNumber: {
-      type: Number,
-
-      unique: true
+      type: Number
     },
     date: {
       type: Date,
@@ -18,6 +18,7 @@ const tourSchema = new Schema(
       enum: ['English', 'Spanish', 'French', 'Italian']
     }
   },
+
   {
     timestamps: true
   }

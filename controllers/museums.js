@@ -8,8 +8,9 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   const museum = await Museum.findById(req.params.id).populate('reviews')
-  const tours = await Tour.find({ museum: req.params.id })
-  // const tours = await Tour.findById(req.params.id).populate('tours')
+  console.log(museum)
+  const tours = museum.tour
+
   res.render('museums/show', { title: 'Museum Information', museum, tours })
 }
 
@@ -19,10 +20,10 @@ const newMuseum = async (req, res) => {
 
 const create = async (req, res) => {
   console.log('hit create controller')
-  req.body.title = !!req.body.title
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
+  // req.body = !!req.body
+  // for (let key in req.body) {
+  //   if (req.body[key] === '') delete req.body[key]z
+
   try {
     const museum = await Museum.create(req.body)
     res.redirect(`/museums/${museum._id}`)
