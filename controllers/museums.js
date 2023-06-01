@@ -32,10 +32,21 @@ const create = async (req, res) => {
     res.render('/museums/new', { errorMsg: err.message })
   }
 }
+const deleteMuseum = async (req, res) => {
+  const museum = await Museum.findOne({
+    'reviews._id': req.params.id,
+    'reviews.user': req.user._id
+  })
+  if (!museum) return res.redirect('/museums')
+  museum.reviews.remove(req.params.id)
+  await museum.save()
+  res.redirect(`/museums/${museum._id}`)
+}
 
 module.exports = {
   index,
   new: newMuseum,
   show,
-  create
+  create,
+  delete: deleteMuseum
 }

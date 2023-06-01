@@ -6,6 +6,13 @@ body {
   background-color: black;
   color:white;
 }
+
+.main-page{
+  background-image:url(hall.png);
+  
+  background-repeat: no-repeat
+ }
+
 #list a {
   border-radius: 4px;
   background-color: #B8C0C2;
@@ -15,7 +22,7 @@ body {
 }
 
 #list a:hover {
-  background-color: teal;
+  background-color: yellow;
 }
 .add-tour-form {
   width: 100%;

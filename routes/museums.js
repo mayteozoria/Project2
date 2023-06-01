@@ -12,4 +12,7 @@ router.get('/:id', museumsCtrl.show)
 
 router.post('/', ensureLoggedIn, museumsCtrl.create)
 
+//new delete option
+// router.delete('/new', ensureLoggedIn, museumsCtrl.delete)
+
 module.exports = router
