@@ -22,8 +22,12 @@ const reviewSchema = new Schema(
 )
 const museumSchema = new Schema(
   {
-    title: { type: String },
-    location: { type: String },
+    title: {
+      type: String
+    },
+    location: {
+      type: String
+    },
     openingTime: {
       type: String
     },

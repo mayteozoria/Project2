@@ -8,7 +8,8 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   const museum = await Museum.findById(req.params.id).populate('reviews')
-  const tours = await Tour.findById(req.params.id).populate('tours')
+  const tours = await Tour.find({ museum: req.params.id })
+  // const tours = await Tour.findById(req.params.id).populate('tours')
   res.render('museums/show', { title: 'Museum Information', museum, tours })
 }
 

@@ -9,7 +9,7 @@ const newTour = async (req, res) => {
 
 const create = async (req, res) => {
   // const ticket = req.body.ticket
-  req.body.ticketNumber = req.params.id
+  req.body.museum = req.params.id
   try {
     await Tour.create(req.body)
   } catch (err) {

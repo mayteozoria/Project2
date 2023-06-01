@@ -16,14 +16,6 @@
   <form id="add-review-form" method="POST" action="/museums/<%= museum._id %>/reviews">
     <label>Review:</label>
     <textarea name="content"></textarea>
-    <!-- <label>Rating:</label>
-    <select name="rating">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option> -->
-  
     <input type="submit" value="Add Review">
   </form>
 <% } %>
@@ -34,8 +26,7 @@
       <tr>
         <th>Date</th>
         <th>Review</th>
-       
-      </tr>
+        </tr>
     </thead>
     <tbody>
       <% museum.reviews.forEach(function(r) { %>
@@ -58,6 +49,32 @@
       <h5>No Reviews Yet</h5>
   <% } %>
    
+
+  <!-- new tours -->
+  <form id="add-tour-form" action="/museums/:id/tours" method="POST">
+    <label>Tickets:</label>
+    <select input type="text" name="ticketNumber">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>  
+  </select>
+  
+    <label>Date:</label>
+     <input type="date" id="tour-date" name="date"
+     value="2023-05-31"
+        min="2023-05-31" max="2420-12-31">
+    <label>Time:</label> 
+  <select>
+    <option value="11">11:00am</option>
+    <option value="2">2:00pm</option>
+    <option value="3">3:00pm</option>
+  </select>
+  <button type="submit" value="Add Tour">Reserve Tour</button>
+  </form>
   
 
 

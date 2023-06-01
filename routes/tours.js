@@ -8,4 +8,6 @@ router.get('/tours/new', ensureLoggedIn, toursCtrl.new)
 
 router.post('/museums/:id/tours/new', ensureLoggedIn, toursCtrl.create)
 
+// router.post('/museums/:id/tours/new', ensureLoggedIn, toursCtrl.create)
+
 module.exports = router

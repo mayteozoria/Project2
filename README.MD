@@ -7,7 +7,7 @@
 ----
 
 ### **_Description_**
-#### A musuem directory that allows users to find more information about museums from all over the world. Details such as location, hours, cost, exhibitions are provided when users create an account. Once users create an account they can also leave reviews. 
+#### A musuem hub that allows users to track museums they want to visit and share with others. Details such as location, hours, cost, exhibitions can be added when users create an account. Once users create an account they can also add amd remove reviews. Users can also book tour reservations. 
 
 ---
 

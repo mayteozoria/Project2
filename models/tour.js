@@ -5,7 +5,7 @@ const tourSchema = new Schema(
   {
     ticketNumber: {
       type: Number,
-      required: true,
+
       unique: true
     },
     date: {
