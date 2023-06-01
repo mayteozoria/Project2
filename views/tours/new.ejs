@@ -1,13 +1,6 @@
 <%- include('../partials/header') %>
 
-<div>Reserve Tour:</div>
-<section id="badge-container">
-  <% tours.forEach(function(t) { %>
-    <article class="badge"><%= t.name %></article>
-  <% }) %>
-</section>
-
-<form id="add-tour-form" action="tours" method="POST">
+<form id="add-tour-form" action="/tours/new" method="POST">
   <label>Tickets:</label>
   <select input type="text" name="ticket">
     <option value="1">1</option>
@@ -17,9 +10,14 @@
     <option value="5">5</option>
     <option value="6">6</option>
     <option value="7">7</option>  
+
   <label>Date:</label>
-   <input type="date" name="date">
-   <input type="submit" value="Add Tour">
+   <input type="datetime-local" id="date" name="date"
+   value="2023-05-31T00:00"
+      min="2023-05-31T00:00" max="2420-12-31T00:00">
+
+   <button type="submit" value="Add Tour">Reserve Tour</button>
 </form>
- 
+
+
    <%- include('../partials/footer') %>

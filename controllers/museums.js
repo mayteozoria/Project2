@@ -18,7 +18,7 @@ const newMuseum = async (req, res) => {
 
 const create = async (req, res) => {
   console.log('hit create controller')
-  req.body.nowOpening = !!req.body.nowOpening
+  req.body.title = !!req.body.title
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }

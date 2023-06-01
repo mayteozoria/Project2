@@ -6,10 +6,10 @@ const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 router.get('/', museumsCtrl.index)
 
-router.get('/new', museumsCtrl.new)
+router.get('/new', ensureLoggedIn, museumsCtrl.new)
 
 router.get('/:id', museumsCtrl.show)
 
-router.post('/', museumsCtrl.create)
+router.post('/', ensureLoggedIn, museumsCtrl.create)
 
 module.exports = router
