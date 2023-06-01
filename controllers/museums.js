@@ -7,7 +7,7 @@ const index = async (req, res) => {
 }
 
 const show = async (req, res) => {
-  const museum = await Museum.findById(req.params.id).populate('reviews')
+  const museum = await Museum.findById(req.params.id).populate('tour')
   console.log(museum)
   const tours = museum.tour
 

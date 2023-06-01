@@ -55,7 +55,7 @@
 
   <!-- new tours -->
   
-  <form id="add-tour-form" action="/museums/<%= museum._id %>/tours/new" method="POST"></form>
+  <form id="add-tour-form" action="/museums/<%= museum._id %>/tours/new" method="POST">
     <label>Tickets:</label>
     <select input type="text" name="ticketNumber">
       <option value="1">1</option>
@@ -78,7 +78,7 @@
     <option value="3">3:00pm</option>
   </select>
   <button type="submit" value="Add Tour">Reserve Tour</button>
- 
+</form>
   
   <% if (tours.length) { %>
   <table>
