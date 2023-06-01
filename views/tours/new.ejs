@@ -1,7 +1,11 @@
 <%- include('../partials/header') %>
+<header><a href="/">HOME</a></header>
 
-<!-- <form id="add-tour-form" action="/tours/new" method="POST">
-  <label>Tickets:</label>
+  <h2>When would you like to tour?</h2>
+  <br><br>
+<form id="add-tour-form" action="/tours/new" method="POST">
+  <label>How many people are in your group?</label>
+  
   <select input type="text" name="ticket">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -11,11 +15,12 @@
     <option value="6">6</option>
     <option value="7">7</option>  
 </select>
-
+<br><br>
   <label>Date:</label>
    <input type="date" id="tour-date" name="tour-date"
    value="2023-05-31"
       min="2023-05-31" max="2420-12-31">
+      <br><br>
   <label>Time:</label> 
 <select>
   <option value="11">11:00am</option>
@@ -24,6 +29,6 @@
 </select>
 <button type="submit" value="Add Tour">Reserve Tour</button>
 </form>
- -->
+
 
    <%- include('../partials/footer') %>

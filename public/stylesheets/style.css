@@ -1,10 +1,28 @@
+*{
+  font: 24px "Gotham Rounded A", "Gotham Rounded B", 'Arial';
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color:white;
 }
-.information {
-  color:white
+#list a {
+  border-radius: 4px;
+  background-color: #B8C0C2;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#list a:hover {
+  background-color: teal;
+}
+.add-tour-form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
 }
 .topnav {
   position: relative;
@@ -50,21 +68,16 @@ body {
   height: 20px;
 }
 #show-page {
-  
   margin: 0 0 2rem;
   padding: 0;
   list-style: none;
 }
   
-/* #show-page li {
-  font-weight: bold;
-} */
+
 #add-review-form {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-
-
   box-sizing: border-box;
 }
 
