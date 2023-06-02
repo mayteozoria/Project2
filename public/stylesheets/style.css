@@ -135,15 +135,15 @@ text-align: center;
 
  #add-review-form {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  /* padding: 12px 20px; */
+  margin: 5px 0;
   box-sizing: border-box;
 }
 #add-review-form input[type="submit"]{
-  width: 50%;
+  width: 25%;
   background-color: teal;
   color: white;
-  padding: 14px 20px;
+  padding: 14px 10px;
   margin: 5px 0;
   border: none;
   border-radius: 2px;
