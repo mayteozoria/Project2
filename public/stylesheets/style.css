@@ -50,7 +50,7 @@ text-align: center;
 .show-page {
   margin-top: 100px; 
   background-color: black;
-  font:36px "MADE Cannes" ;
+  font: 34px "MADE Cannes";
   /* padding-top:20px; */
   margin:150px;
 }
@@ -125,7 +125,7 @@ text-align: center;
 }
 
 .login img {
-  height: 20px;
+  height: 10px;
 }
 #show-page {
   margin: 0 0 2rem;
@@ -150,3 +150,6 @@ text-align: center;
   cursor: pointer;
 }
 
+.review-user {
+  border-radius: 50%;
+}

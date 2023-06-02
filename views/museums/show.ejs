@@ -25,51 +25,53 @@
 <br>
 <br>
 <section>
-<h2 style="color:white">Reviews</h2>
+<h2 style=" text-decoration: underline;color:white">Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/museums/<%= museum._id %>/reviews">
-    <label style="color:white">Review:</label>
+    <!-- <label style="color:white">Review:</label> -->
     <textarea name="content"></textarea>
     <input type="submit" value="Add Review">
   </form>
   <% } %>
   
+  <!-- ---SHOW-REVIEWS--- -->
   <% if (museum.reviews.length) { %>
     <table>
-      <thead>
+      <!-- <thead>
         <tr>
           <th style="color:white">Date</th>
-          <th style="color:white">Add a Review</th>
         </tr>
-      </thead>
-      <tbody>
+      </thead> -->
+
+     <tbody>
         <% museum.reviews.forEach(function(r) { %>
-          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
+          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"  ><%= r.userName %></td>
+
           <tr>
-            <td><%= r.createdAt.toLocaleDateString() %></td>
-            <td><%= r.content %></td>
+            <td style="color:white"><%= r.createdAt.toLocaleDateString() %></td>
+            <td style="color:white"><%= r.content %></td>
+            
             <td>
               <% if (user?._id.equals(r.user)) { %>
                 <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
+              </tr>
                 <% } %>
-              </td>
-            </tr>
+            </td>
             <% }); %>
           </tbody>
         </table>
         <% } else { %>
-          <h5>No Reviews Yet</h5>
+          <h5 style="color:white">No Reviews Yet</h5>
           <% } %>
-          
-
-          </section>
+    </section>
 
   <!-- new tours -->
-  
+  <br><br>
+  <h2 style=" text-decoration: underline;color:white">Reserve A Tour:</h2>
   <form id="add-tour-form" action="/museums/<%= museum._id %>/tours/new" method="POST">
-    <label>Tickets:</label>
+    <label style="color:white">Tickets:</label>
     <select input type="text" name="ticketNumber">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -80,11 +82,11 @@
       <option value="7">7</option>  
   </select>
   
-    <label>Date:</label>
+    <label style="color:white">Date:</label>
      <input type="date" id="tour-date" name="date"
      value="2023-06-01"
         min="2023-05-31" max="2420-12-31">
-    <label>Time:</label> 
+    <label style="color:white">Time:</label> 
   <select>
     <option value="11">11:00am</option>
     <option value="2">2:00pm</option>
@@ -93,18 +95,22 @@
   <button type="submit" value="Add Tour">Reserve Tour</button>
 </form>
   
+<br>
   <% if (tours.length) { %>
   <table>
       <thead>
         <tr>
-          <th>Tours</th>
+          <th style="color:white">Reserved Tours </th>
         </tr>
+        <br>
       </thead>
+  
   <% tours.forEach(function(t) { %>
    <thead>
+    
    <tr>
-       <td><%= t.ticketNumber %></td>
-       <td><%= t.date %></td>
+       <td style="color:white"><%= t.ticketNumber %></td>
+       <td style="color:white"><%= t.date %></td>
        
        
   </thead>
