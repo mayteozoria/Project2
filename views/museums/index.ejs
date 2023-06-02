@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 
-<nav class="topnav">
+<body class="new-page"></body>
+
+<nav class="navbar">
 <!-- <div><a href="/">HOME</a> -->
 <% if(user) { %> 
     <a href="/museums/new" <%- title === 'Add Museums' ? 'class="active"' : '' %><br>Add A New Museum Recommendation<br></a>
@@ -10,22 +12,26 @@
   <% } else { %>
     <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
-</nav>
+  </nav>
 
-
-
+<h1 id="table">Museum Directory</h1>
 
 <table id="list">
-<div class="information">
-  <% museums.forEach(function(m) { %>
+ 
+
+    <% museums.forEach(function(m) { %>
+  <tr>
+      <th>Name:</th>
+      <th>Location:</th>
+      <th>More Information:</th>
+    </tr>
+
     <tr>
-      <td class="information"><a href="/museums/<%= m._id %>">Click for more Information</a></td>
       <td><%= m.title %></td>
       <td><%= m.location %></td>
-     </tr>
-    <% }); %>
- 
-</div>
+      <td class="information"><a href="/museums/<%= m._id %>" style="color:white">Details</a></th>
+    </td>
+  <% }); %>
  </table>
 
 <%- include('../partials/footer') %>

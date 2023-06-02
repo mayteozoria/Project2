@@ -1,17 +1,23 @@
 <%- include('../partials/header') %>
 
-<header><a href="/">HOME</a>
-
-</header>
+<header><a href="/museums">BACK TO DIRECTORY</a></header>
 <br><br>
-<section id="museum-container">
-  <div>Name:</div>
-  <div><%= museum.title %></div>
-  <div>Location:</div>
-  <div><%= museum.location %></div>
-  
+
+
+<table id="show-list">
+  <tr>
+    <th>Name:</th>
+    <th>Location:</th>
+  </tr>
+  <tr>
+    
+    <td style="color:black"><%= museum.title %></td>
+    <td style="color:black"><%= museum.location %></td>
+  </tr>
+  </table>
+  <br>
   <!-- ----DELETE--- -->
-  <form action="/museums/<%= museum._id %>?_method=DELETE" method="POST">
+  <form id="delete-list" action="/museums/<%= museum._id %>?_method=DELETE" method="POST">
     <button type="submit">Delete</button>
   </form>
 </section>

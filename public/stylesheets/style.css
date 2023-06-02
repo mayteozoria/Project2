@@ -13,71 +13,107 @@
   background-image:url(hall.png);
   background-size: cover;
   height:100%;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
 }
 .enter-tab {
 text-align: center;
 }
+.new-page {
+  margin-top: 100px; 
+  background-color: black;
+  font:36px "MADE Cannes" ;
+  /* padding-top:20px; */
+  margin:150px;
+}
 
-
-
-
-#list a {
-  border-radius: 4px;
-  background-color: teal;
-  padding: 4px;
+.navbar {
+  overflow: hidden;
+  position:fixed;
+  top: 0;
+  width:100%
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 24px;
+}
+.navbar a:hover {
+  background: teal;
+  color: black;
+}
+  
+#table {
+  color:white;
+  font-size: 48px;
 }
 
-#list a:hover {
-  background-color: teal;
+#list {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color:white;
+  font-size: 22px;
 }
+
+
+#list td, #list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#list tr:nth-child{background-color:teal;}
+
+#list tr:hover {background-color: teal;}
+
+#list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:black;
+  color: white;
+}
+
+#show-list {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color:white;
+  font-size: 22px;
+}
+
+
+#show-list td, #show-list th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#show-list tr:nth-child{background-color:teal;}
+
+#show-list tr:hover {background-color: teal;}
+
+#show-list th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:black;
+  color: white;
+}
+
+
+
 .add-tour-form {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
-
-}
-.topnav {
-  position: relative;
-  overflow: hidden;
 }
 
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 22px;
-}
-.topnav-centered a {
-  float: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: teal;
-  color: white;
-  border-radius: 20%;
-}
-.topnav a:hover {
-  background-color: teal;
-  color: white;
-  border-radius: 60%;
-}
-.topnav-right {
-    float: right;
-    display: block;
-  }
-.topnav-left{
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 22px;
-}
-  
+
 .login {
   margin:0
 }
@@ -90,7 +126,7 @@ text-align: center;
   padding: 0;
   list-style: none;
 }
-  
+
 
 #add-review-form {
   width: 100%;
@@ -109,9 +145,4 @@ text-align: center;
   border-radius: 2px;
   cursor: pointer;
 }
-.add-museum {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
+
