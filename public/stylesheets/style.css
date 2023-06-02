@@ -132,9 +132,12 @@ text-align: center;
   padding: 0;
   list-style: none;
 }
-
+textarea{
+  width: 100%;
+}
  #add-review-form {
   width: 100%;
+  position:inherit;
   /* padding: 12px 20px; */
   margin: 5px 0;
   box-sizing: border-box;

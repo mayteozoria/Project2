@@ -69,7 +69,7 @@
 
   <!-- new tours -->
   <br><br>
-  <h2 style=" text-decoration: underline;color:white">Reserve A Tour:</h2>
+  <h2 style=" text-decoration: underline;color:white">Reserve A Tour</h2>
   <form id="add-tour-form" action="/museums/<%= museum._id %>/tours/new" method="POST">
     <label style="color:white">Tickets:</label>
     <select input type="text" name="ticketNumber">
@@ -87,10 +87,11 @@
      value="2023-06-01"
         min="2023-05-31" max="2420-12-31">
     <label style="color:white">Time:</label> 
-  <select>
-    <option value="11">11:00am</option>
-    <option value="2">2:00pm</option>
-    <option value="3">3:00pm</option>
+  <select name="time">
+    <option value="11:00am">11:00am</option>
+    <option value="1:00pm">1:00pm</option>
+    <option value="3:00pm">3:00pm</option>
+  
   </select>
   <button type="submit" value="Add Tour">Reserve Tour</button>
 </form>
@@ -100,7 +101,7 @@
   <table>
       <thead>
         <tr>
-          <th style="color:white">Reserved Tours </th>
+          <th style="color:white">Reserved Tours: </th>
         </tr>
         <br>
       </thead>
@@ -110,7 +111,8 @@
     
    <tr>
        <td style="color:white"><%= t.ticketNumber %></td>
-       <td style="color:white"><%= t.date %></td>
+       <td style="color:white"><%= t.time %></td>
+       <td style="color:white"><%= t.date.toLocaleDateString() %></td>
        
        
   </thead>

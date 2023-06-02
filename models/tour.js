@@ -12,7 +12,9 @@ const tourSchema = new Schema(
       type: Date,
       required: () => Date.now() + 365 * 24 * 60 * 60000
     },
-
+    time: {
+      type: String
+    },
     language: {
       type: String,
       enum: ['English', 'Spanish', 'French', 'Italian']
