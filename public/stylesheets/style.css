@@ -1,32 +1,26 @@
-*{
-  font: 18px   "Sans-serif";
+/* ---MAIN PAGE--- */
+.main-index, .second-part{
+  font: 96px  "MADE Cannes";
   font-variant: small-caps;
-  /* //color:white; */
-}
-body {
-  background-color: black;
-  color:white;
-}
-.main{
-  font: 48px   "MADE Cannes";
-  font-variant: small-caps;
-  color:white;
-}
-.second-part{
-  font: 54px   "MADE Cannes";
-  font-variant: small-caps;
-  color:white;
+  font-weight: bold;
+  color:yellow;
+  padding-bottom:400px;
+  padding-top:400px;
+  padding-left: 100px;
+ 
 }
 .main-page{
   background-image:url(hall.png);
-  background-position:0cap;
-  background-repeat: no-repeat;
   background-size: cover;
-  
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.left-hub {
-  color:white
+.enter-tab {
+text-align: center;
 }
+
+
 
 
 #list a {
@@ -85,10 +79,7 @@ body {
 }
   
 .login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
+  margin:0
 }
 
 .login img {

@@ -1,19 +1,12 @@
 <%- include('./partials/header') %>
-<h1 class="main"><%= title %></h1>
+
+<div class="main-index"><%= title %><br><br>"Museums are wormholes to other worlds."-Jerry Saltz"</div>
 <body class="main-page"><body>
 
-<h2 class="second-part">"Museums are wormholes to other worlds."-Jerry Saltz"
-  </h2>
-
-  <div class="topnav">
-    
-    
+<div>
     <% if(user) { %> 
-    <!-- <div class="topnav-left">
-      <a href="/museums/new" <%- title === 'Add Museums' ? 'class="active"' : '' %>>ADD</a>
-    </div> -->
-
-    <div><a href="/museums" <%- title === 'All Museums' ? 'class="active"' : '' %>>ENTER</a></div>
+    
+  <div class="topnav-left" style="color:white"><a href="/museums" <%- title === 'All Museums' ? 'class="active"' : '' %>>ENTER</a></div>
 
     <!-- <div><a href="/tours/new"	<%- title === 'Add Tour' ? 'class="active"' : '' %>> RESERVE TOUR</a></div> -->
 
