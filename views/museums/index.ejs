@@ -1,20 +1,17 @@
 <%- include('../partials/header') %>
 
+<nav class="topnav">
+<!-- <div><a href="/">HOME</a> -->
 <% if(user) { %> 
-  <div class="topnav-left">
-    <a href="/museums/new" <%- title === 'Add Museums' ? 'class="active"' : '' %>>Add A New Museum Recommendation</a>
-  </div>
-
-  <!-- <div><a href="/museums" <%- title === 'All Museums' ? 'class="active"' : '' %>>MUSEUMS</a></div>
-
-  <div><a href="/tours/new"	<%- title === 'Add Tour' ? 'class="active"' : '' %>> RESERVE TOUR</a></div>
-
-  <div><a href="/logout">LOG OUT</a></div> -->
+    <a href="/museums/new" <%- title === 'Add Museums' ? 'class="active"' : '' %><br>Add A New Museum Recommendation<br></a>
+  <!-- </div> -->
+<a href="/logout">LOG OUT</a>
 
   <% } else { %>
     <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
  </div>
+</nav>
 
 
 
@@ -23,7 +20,7 @@
 <div class="information">
   <% museums.forEach(function(m) { %>
     <tr>
-      <td class="information"><a href="/museums/<%= m._id %>">Museum Information</a></td>
+      <td class="information"><a href="/museums/<%= m._id %>">Click for more Information</a></td>
       <td><%= m.title %></td>
       <td><%= m.location %></td>
       <!-- <td><%= m.openingTime %></td>

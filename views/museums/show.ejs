@@ -4,12 +4,16 @@
 
 </header>
 <br><br>
-<section id="show-page">
+<section id="museum-container">
   <div>Name:</div>
   <div><%= museum.title %></div>
   <div>Location:</div>
   <div><%= museum.location %></div>
   
+  <!-- ----DELETE--- -->
+  <form action="/museums/<%= museum._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
 </section>
 
 

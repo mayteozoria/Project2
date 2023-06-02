@@ -1,28 +1,44 @@
 *{
-  font: 24px "Gotham Rounded A", "Gotham Rounded B", 'Arial';
+  font: 18px   "Sans-serif";
+  font-variant: small-caps;
+  /* //color:white; */
 }
-
 body {
   background-color: black;
   color:white;
 }
-
+.main{
+  font: 48px   "MADE Cannes";
+  font-variant: small-caps;
+  color:white;
+}
+.second-part{
+  font: 54px   "MADE Cannes";
+  font-variant: small-caps;
+  color:white;
+}
 .main-page{
   background-image:url(hall.png);
+  background-position:0cap;
+  background-repeat: no-repeat;
+  background-size: cover;
   
-  background-repeat: no-repeat
- }
+}
+.left-hub {
+  color:white
+}
+
 
 #list a {
   border-radius: 4px;
-  background-color: #B8C0C2;
+  background-color: teal;
   padding: 4px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 #list a:hover {
-  background-color: yellow;
+  background-color: teal;
 }
 .add-tour-form {
   width: 100%;
@@ -37,12 +53,11 @@ body {
 }
 
 .topnav a {
-  float: left;
+  float: right;
   color: #f2f2f2;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
 .topnav-centered a {
   float: none;
@@ -63,6 +78,11 @@ body {
     float: right;
     display: block;
   }
+.topnav-left{
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
   
 .login {
   display: flex;
@@ -97,4 +117,10 @@ body {
   border: none;
   border-radius: 2px;
   cursor: pointer;
+}
+.add-museum {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }

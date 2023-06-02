@@ -23,7 +23,6 @@ const create = async (req, res) => {
   // req.body = !!req.body
   // for (let key in req.body) {
   //   if (req.body[key] === '') delete req.body[key]z
-
   try {
     const museum = await Museum.create(req.body)
     res.redirect(`/museums/${museum._id}`)
@@ -33,16 +32,19 @@ const create = async (req, res) => {
   }
 }
 const deleteMuseum = async (req, res) => {
-  const museum = await Museum.findOne({
-    'reviews._id': req.params.id,
-    'reviews.user': req.user._id
-  })
-  if (!museum) return res.redirect('/museums')
-  museum.reviews.remove(req.params.id)
-  await museum.save()
-  res.redirect(`/museums/${museum._id}`)
+  await Museum.findOneAndDelete({ _id: req.params.id })
+  res.render('/museums/index')
 }
 
+// const museum = await Museum.findOne({
+//   'reviews._id': req.params.id,
+//   'reviews.user': req.user._id
+// })
+// if (!museum) return res.redirect('/museums')
+// museum.reviews.remove(req.params.id)
+// await museum.save()
+// res.redirect(`/museums/${museum._id}`)
+// }
 module.exports = {
   index,
   new: newMuseum,
