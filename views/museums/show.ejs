@@ -25,31 +25,25 @@
 <br>
 <br>
 <section>
-<h2 style=" text-decoration: underline;color:white">Reviews</h2>
+<h2 style=" text-decoration: underline;color:white">Comments</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/museums/<%= museum._id %>/reviews">
     <!-- <label style="color:white">Review:</label> -->
     <textarea name="content"></textarea>
-    <input type="submit" value="Add Review">
+    <input type="submit" value="Add Comment">
   </form>
   <% } %>
   
   <!-- ---SHOW-REVIEWS--- -->
   <% if (museum.reviews.length) { %>
     <table>
-      <!-- <thead>
-        <tr>
-          <th style="color:white">Date</th>
-        </tr>
-      </thead> -->
-
-     <tbody>
+      <tbody>
         <% museum.reviews.forEach(function(r) { %>
-          <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"  ><%= r.userName %></td>
+          <td><img class="avatr" alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer"  ><%= r.userName %></td>
 
           <tr>
-            <td style="color:white"><%= r.createdAt.toLocaleDateString() %></td>
-            <td style="color:white"><%= r.content %></td>
+            <td style="font-family:'Times Roman';color:white"><%= r.createdAt.toLocaleDateString() %></td>
+            <td style="font-family:'Times Roman';color:white"><%= r.content %></td>
             
             <td>
               <% if (user?._id.equals(r.user)) { %>
@@ -97,27 +91,23 @@
 </form>
   
 <br>
+<table id ="tours-list">
   <% if (tours.length) { %>
-  <table>
-      <thead>
-        <tr>
-          <th style="color:white">Reserved Tours: </th>
+    <h4 style="color:white">Current Reservations:</h4>
+      <tr>
+          <th>Tickets</th>
+          <th>Date</th>
+          <th>Time</th>
         </tr>
-        <br>
-      </thead>
-  
   <% tours.forEach(function(t) { %>
-   <thead>
-    
+ 
    <tr>
-       <td style="color:white"><%= t.ticketNumber %></td>
-       <td style="color:white"><%= t.time %></td>
-       <td style="color:white"><%= t.date.toLocaleDateString() %></td>
-       
-       
-  </thead>
- <% }); %>
- </tbody>
+       <td style="color:white">Ticket:<%= t.ticketNumber %></td>
+       <td style="color:white">Time:<%= t.time %></td>
+       <td style="color:white">Date:<%= t.date.toLocaleDateString() %></td>
+   </tr>
+  <% }); %>
+ 
  <% } %>
 </table>
 

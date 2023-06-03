@@ -1,16 +1,18 @@
 <%- include('../partials/header') %>
+<body class="show-page"></body>
+<!-- 
+<header ><a href="/museums" style="color:white">BACK TO DIRECTORY</a></header> -->
 
-
-<nav><div class="topnav-left"><a href="/museums" style="color:white">HUB</a></div>
+<nav><div class="topnav-left"><a href="/museums" style="color:white">Back to HUB</a></div>
 </nav>
 
-<h2 class = "add-museum">Add new museum recommendation </h2>
+<h2 style="color:white" class = "add-museum">Add new museum recommendation </h2>
 
 <form id="new-form" action="/museums" method="POST">
   <br>
-  <label>Title:<br><input type="text" name="title">
+  <label style="color:white">Title:<br><input type="text" name="title">
 </label><br>
-<label>Location:<br><input type="text" name="location">
+<label style="color:white">Location:<br><input type="text" name="location">
 </label><br>
   <button type="submit">Add Museum</button>
 </form>
