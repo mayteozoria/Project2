@@ -7,9 +7,6 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'MuseumHUB' })
 })
 
-// router.get('/', function (req, res, next) {
-//   res.redirect('/museums')
-// })
 router.get(
   '/auth/google',
   passport.authenticate(
